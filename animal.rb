@@ -22,13 +22,21 @@ class Animal
     @name
   end
 
-  def name=(value)
-    @name = value
-  end
+  # def name=(value)
+  #   @name = value
+  # end
 
-  def speak()
-    puts "Muaahhh, animal speaks :)"
-  end
+  # def speak()
+  #   puts "Muaahhh, animal speaks :)"
+  # end
+
+  # Use instead of creating a function.
+  # attr_reader :name
+  # attr_writer :name
+
+  # Allows for reading and writing
+  attr_accessor :name
+
 end
 
 # animal_1 = Animal.new(4, "Rex")
