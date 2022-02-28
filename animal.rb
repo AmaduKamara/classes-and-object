@@ -37,6 +37,14 @@ class Animal
   # Allows for reading and writing
   attr_accessor :name
 
+  def speak(animal)
+    if animal.type = "dog"
+      "Woof Woof"
+    elsif animal.type = "spider"
+      "..."
+    end
+  end
+
 end
 
 # animal_1 = Animal.new(4, "Rex")
