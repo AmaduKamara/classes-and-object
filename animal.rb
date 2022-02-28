@@ -1,3 +1,6 @@
+require "./dog.rb"
+require "./spider.rb"
+
 class Animal
   def initialize(number_of_legs, type, name = "Unknown")
     @id = Random.rand(1..1000)
@@ -45,13 +48,8 @@ class Animal
   #   end
   # end
 
-  # implementing abstraction
   def speak
-    if @type == "dog"
-      "Woof Woof"
-    elsif @type == "spider"
-      "..."
-    end
+    "grrrr"
   end
 
   def bring_a_stick
@@ -92,3 +90,20 @@ animal_spider.bring_a_stick()
 
 animal_dog.make_a_web()
 animal_spider.make_a_web()
+
+dog = Dog.new("black", "Rex")
+spider = Spider.new(85, "Wilma")
+
+dog.bring_a_stick()
+spider.bring_a_stick()
+
+dog.make_a_web()
+spider.make_a_web()
+
+animal = Animal.new("lion", 4, "Rex")
+dog = Dog.new("black", "Rex")
+spider = Spider.new(85, "Wilma")
+
+animal.speak()
+dog.speak()
+spider.speak()
