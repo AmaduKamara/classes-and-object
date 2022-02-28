@@ -53,6 +53,18 @@ class Animal
       "..."
     end
   end
+
+  def bring_a_stick
+    if @type == "dog"
+      "Here is your stick ------------"
+    end
+  end
+
+  def make_a_web
+    if @type == "spider"
+      "www"
+    end
+  end
 end
 
 animal_1 = Animal.new("dog", 4, "Rex")
@@ -71,3 +83,12 @@ animal_4 = Animal.new("spider", 8, "Wilma")
 
 animal_3.speak()
 animal_4.speak()
+
+animal_dog = Animal.new("dog", 4, "Rex")
+animal_spider = Animal.new("spider", 8, "Wilma")
+
+animal_dog.bring_a_stick()
+animal_spider.bring_a_stick()
+
+animal_dog.make_a_web()
+animal_spider.make_a_web()
