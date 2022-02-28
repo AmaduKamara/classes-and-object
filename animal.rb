@@ -37,21 +37,23 @@ class Animal
   # Allows for reading and writing
   attr_accessor :name
 
-  def speak(animal)
-    if animal.type = "dog"
+  # def speak(animal)
+  #   if animal.type = "dog"
+  #     "Woof Woof"
+  #   elsif animal.type = "spider"
+  #     "..."
+  #   end
+  # end
+
+  # implementing abstraction
+  def speak
+    if @type == "dog"
       "Woof Woof"
-    elsif animal.type = "spider"
+    elsif @type == "spider"
       "..."
     end
   end
-
 end
-
-# animal_1 = Animal.new(4, "Rex")
-# animal_2 = Animal.new(8)
-
-# animal_1.speak
-# animal_2.speak
 
 animal_1 = Animal.new("dog", 4, "Rex")
 p animal_1.id
@@ -63,3 +65,9 @@ animal_2 = Animal.new("cat", 8)
 p animal_2.name
 animal_2.name = "Fluffy"
 p animal_2.name
+
+animal_3 = Animal.new("dog", 4, "Rex")
+animal_4 = Animal.new("spider", 8, "Wilma")
+
+animal_3.speak()
+animal_4.speak()
